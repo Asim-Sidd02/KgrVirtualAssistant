@@ -7,11 +7,14 @@ import speech_recognition as sr
 
 
 
+
+
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 engine.setProperty("rate", 166)
 
-engine.setProperty('volume', 0.8)
+
+engine.setProperty('volume', 0.7)
 
 def speak(audio):
     engine.say(audio)
@@ -56,12 +59,15 @@ def takeCommand():
     return query
 
 
+
+
     
     
-if __name__ == '__main__':
+if __name__ == '_main_':
     whishMe()
-    speak("Welcome to KG Reddy College of Engineering And Technology")
-    speak("I Am Miss Plexi, How may I help you?")
+   
+
+    speak("I Am Vision, How may I help you?")
 
 
 while True:
@@ -70,14 +76,14 @@ while True:
    
     if 'washroom' in query:
         engine.say('It is present at each floor, for gents, left side at end, for ladies, right side at end')
-        
+        speak("would you like to know anything else, or say exit")
 
 
 #Ground Flooor
  
     elif 'seminar' in query:
        speak("It is at ground floor, move towards right exit of the reception hall, room number G 115")
-
+       speak("would you like to know anything else, or say exit")
 
 
     elif 'department of student affair' in query:
@@ -86,85 +92,102 @@ while True:
    
     elif 'library' in query:
         speak('It is at the ground floor, move towards right exit of the reception, next to the DSA room, room number G 113')
- 
+        speak("would you like to know anything else, or say exit")
 
 
 
     elif 'office' in query:
        speak("It is at ground floor, move towards left exit of the reception hall and then take left, room number G 101 ")
+       speak("would you like to know anything else, or say exit")
+
+
 
     elif 'director' in query:
         speak("It is at ground floor, move towards left exit of the reception hall and then take left, room number G 110 ")
+        speak("would you like to know anything else, or say exit")
+
+
 
     elif 'chairman' in query:
         speak("It is at ground floor, move towards left exit of the reception hall and then take right, room number G 111 ")
-
+        speak("would you like to know anything else, or say exit")
+        
+        
 
     elif 'principal' in query:
         speak("It is at ground floor, move towards left exit of the reception hall and then take left, room number G 106 ")
-
+        speak("would you like to know anything else, or say exit")
+        
+        
 
     elif 'examination' in query:
         speak("It is at ground floor, move towards left exit of the reception hall and then take left, room number G 102 ")
-
+        speak("would you like to know anything else, or say exit")
+        
+        
 
     elif 'waiting room' in query:
         speak("It is at ground floor, move towards left exit of the reception hall and then take left, room number G 107 ")
-
+        speak("would you like to know anything else, or say exit")
+        
+        
     elif 'department of electrical and electronic' in query:
         speak("It is at ground floor, move towards left exit of the reception hall and then take right, room number G 112 ")
-
+        speak("would you like to know anything else, or say exit")
 #First Floor
 
 
 
     elif 'placement cell' in query:
         speak("It is at first floor,then turn left, room number F 201 ")
-
+        speak("would you like to know anything else, or say exit")
 
 
     elif 'i q a c office' in query:
         speak("It is at first floor,then turn right, room number F 207 ")
+        speak("Would You like to know something else, if not then say exit.")
+
+
 
 
 
     elif 'digital library' in query:
         speak("It is at first floor,then turn right, room number F 208")
-
+        speak("would you like to know anything else, or say exit")
 
 
     elif 'research innovation' in query:
         speak("It is at first floor,then turn right, room number F 209")
-
+        speak("would you like to know anything else, or say exit")
 
 
     elif 'mechanical engineering' in query:
         speak("It is at first floor,then turn right, room number F 213")
-
+        speak("would you like to know anything else, or say exit")
 
 #Second Floor
 
 
     elif 'department of cse' in query:
         speak("It is at 3rd floor, you can use elevator or you can use stairs then, turn right, room number 309")
-
+        speak("would you like to know anything else, or say exit")
 
 
 
 
     elif 'seed' in query:
         speak("It is at 3rd floor, you can use elevator or you can use stairs then, turn right, room number 310")
-
+        speak("would you like to know anything else, or say exit")
 
 
     elif 'humanities and science' in query:
         speak("It is at 3rd floor, you can use elevator or you can use stairs then, turn left, room number 301")
-
+        speak("would you like to know anything else, or say exit")
 
 
     elif 'hod cabin' in query:
         speak("It is at 3rd floor, you can use elevator or you can use stairs then, turn right, room number 311")
-
+        speak("would you like to know anything else, or say exit")
 
 #third floor
 
@@ -172,10 +195,15 @@ while True:
 
     elif 'educational technology' in query:
         speak("It is at 4th floor, you can use elevator or you can use stairs then, turn right, room number 309")
+        speak(",,,,   would you like to know anything else, or say exit")
+
+
+    elif 'exit' in query:
+        speak("Thank you for visting")
+        exit()
 
 
 
 
     else:
         speak('Information Not Available')
-        exit()
